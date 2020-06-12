@@ -2,6 +2,16 @@
  *  @author YOUR NAME HERE
  */
 public class LeapYear {
+    /** Check whether a year is a leap year.
+     *  @param  year to be analyzed
+     */
+    public static boolean isLeapYear(int year) {
+        if (year % 400 == 0 || (year % 4 == 0 && year % 100 != 0)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 
     /** Calls isLeapYear to print correct statement.
      *  @param  year to be analyzed
@@ -12,17 +22,6 @@ public class LeapYear {
         } else {
             System.out.printf("%d is not a leap year.\n", year);
         }
-    }
-
-    /** Calls isLeapYear to print correct statement.
-     *  @param  year to be analyzed
-     */
-    public static boolean isLeapYear(int year) {
-        if (year % 400 == 0 || (year % 4 == 0 & year % 100 != 0)){
-	    return true;
-	}else{
-	    return false;
-	}
     }
 
     /** Must be provided an integer as a command line argument ARGS. */
@@ -41,4 +40,3 @@ public class LeapYear {
         }
     }
 }
-
